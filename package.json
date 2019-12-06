@@ -2,20 +2,24 @@
     "name": "dmhacker-youtube",
     "version": "2.0.1",
     "description": "YouTube proxy that can fetch and play videos",
+    "homepage": "https://heip.github.io/dmhacker-youtube",
     "engines": {
         "node": "10.16.3"
     },
     "main": "index.js",
     "scripts": {
-        "start": "node index.js"
+        "start": "node index.js",
+        "predeploy": "yarn run build",
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "ejs": "2.7.1",
         "express": "4.17.1",
-        "ytdl-core": "0.29.7",
-        "youtube-search": "1.1.4",
+        "gh-pages": "^2.1.1",
         "log": "6.0.0",
-        "log-node": "7.0.0"
+        "log-node": "7.0.0",
+        "youtube-search": "1.1.4",
+        "ytdl-core": "0.29.7"
     },
     "repository": {
         "type": "git",
